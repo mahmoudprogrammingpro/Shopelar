@@ -1,0 +1,2 @@
+# Shopelar
+Shopelar is a premium luxury e-commerce landing page built with HTML, CSS, and JavaScript. It features a modern responsive design, elegant product showcases, an about section, contact form, and a refined user experience inspired by high-end fashion and lifestyle brands.
