@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — Shopelar</title>
+  <meta name="description" content="Get in touch with Shopelar. Schedule a fitting, inquire about support, or visit our atelier showroom.">
+
+  <!-- Typography Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Polyfills for modern browser features (Popover & Anchor Positioning) -->
+  <script type="module">
+    if (!HTMLElement.prototype.hasOwnProperty("popover")) {
+      await import("https://unpkg.com/@oddbird/popover-polyfill@latest");
+    }
+  </script>
+  <script type="module">
+    if (!("anchorName" in document.documentElement.style)) {
+      await import("https://unpkg.com/@oddbird/css-anchor-positioning");
+    }
+  </script>
+</head>
+
+<body>
+
+  <!-- Promo Announcement Bar -->
+  <div class="promo-bar" id="promo-banner">
+    <div class="promo-container">
+      <div class="promo-text-carousel">
+        <span class="promo-message">Complimentary worldwide shipping on orders over $150</span>
+      </div>
+      <div class="promo-utilities">
+        <a href="#" class="utility-link" id="utility-track">Track Order</a>
+        <a href="#" class="utility-link" id="utility-help">Help Center</a>
+        <div class="utility-dropdown" id="utility-currency-selector">
+          <button class="utility-dropdown-btn" id="currency-btn">
+            USD $ <svg class="chevron-icon" viewBox="0 0 24 24">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+          <div class="utility-dropdown-content">
+            <a href="#">USD $</a>
+            <a href="#">EUR €</a>
+            <a href="#">GBP £</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Primary Site Header -->
+  <header class="site-header" id="main-header">
+    <div class="header-container">
+
+      <!-- Mobile Hamburger Trigger -->
+      <button class="mobile-menu-btn" id="mobile-menu-trigger" aria-label="Open navigation menu"
+        popovertarget="mobile-drawer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="6" x2="20" y2="6"></line>
+          <line x1="4" y1="18" x2="20" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Brand Logo -->
+      <div class="logo-section">
+        <a href="index.html" class="brand-logo" id="nav-logo">SHOPELAR</a>
+      </div>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-desktop" aria-label="Main desktop navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link" id="link-home">Home</a>
+          </li>
+          <li class="nav-item dropdown-trigger">
+            <a href="#" class="nav-link" id="link-shop">
+              Shop
+              <svg class="chevron-icon" viewBox="0 0 24 24">
+                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+            <!-- Simple Dropdown -->
+            <ul class="simple-dropdown">
+              <li><a href="new-arrivals.html" class="dropdown-item">New Arrivals</a></li>
+              <li><a href="best-sellers.html" class="dropdown-item">Best Sellers</a></li>
+              <li><a href="limited-edition.html" class="dropdown-item">Limited Edition</a></li>
+              <li><a href="clearance-sale.html" class="dropdown-item">Clearance Sale</a></li>
+            </ul>
+          </li>
+          <li class="nav-item megamenu-trigger">
+            <a href="#" class="nav-link" id="link-categories">
+              Categories
+              <svg class="chevron-icon" viewBox="0 0 24 24">
+                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+            <!-- Rich Mega Menu Dropdown -->
+            <div class="megamenu">
+              <div class="megamenu-grid">
+                <div class="megamenu-column">
+                  <h3 class="megamenu-title">Trending</h3>
+                  <ul class="megamenu-list">
+                    <li><a href="the-linen-look.html">The Linen Look</a></li>
+                    <li><a href="warm-palette-suits.html">Warm Palette Suits</a></li>
+                    <li><a href="monochrome-essentials.html">Monochrome Essentials</a></li>
+                    <li><a href="minimalist-leather.html">Minimalist Leather</a></li>
+                    <li><a href="summer-knitwear.html">Summer Knitwear</a></li>
+                  </ul>
+                </div>
+                <div class="megamenu-column">
+                  <h3 class="megamenu-title">Women</h3>
+                  <ul class="megamenu-list">
+                    <li><a href="tailored-coats.html">Tailored Coats</a></li>
+                    <li><a href="silk-shirts-and-tops.html">Silk Shirts & Tops</a></li>
+                    <li><a href="structured-trousers.html">Structured Trousers</a></li>
+                    <li><a href="summer-dresses.html">Summer Dresses</a></li>
+                    <li><a href="leather-handbags.html">Leather Handbags</a></li>
+                  </ul>
+                </div>
+                <div class="megamenu-column">
+                  <h3 class="megamenu-title">Men</h3>
+                  <ul class="megamenu-list">
+                    <li><a href="overcoats-and-jackets.html">Overcoats & Jackets</a></li>
+                    <li><a href="fine-knit-sweaters.html">Fine Knit Sweaters</a></li>
+                    <li><a href="tailored-shirts.html">Tailored Shirts</a></li>
+                    <li><a href="casual-chinos.html">Casual Chinos</a></li>
+                    <li><a href="chrono-watches.html">Chrono Watches</a></li>
+                  </ul>
+                </div>
+                <div class="megamenu-column promo-column">
+                  <div class="megamenu-card">
+                    <img src="promo_banner.png" alt="Exquisite Neutral Apparel Display" class="megamenu-card-image"
+                      loading="lazy">
+                    <div class="megamenu-card-overlay">
+                      <span class="card-tag">NEW COLLECTION</span>
+                      <h4 class="card-title">The Neutral Tone</h4>
+                      <a href="the-neutral-tone.html" class="card-cta">Explore Now</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link" id="link-about">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link active" id="link-contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Right Actions (Search Bar & Action Buttons) -->
+      <div class="header-actions">
+
+        <!-- Search Bar Section -->
+        <div class="search-container" id="nav-search-container">
+          <button class="search-toggle-btn" id="nav-search-toggle" aria-label="Toggle search bar">
+            <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+          <div class="search-input-wrapper" id="nav-search-wrapper">
+            <form action="#" class="search-form" id="nav-search-form">
+              <input type="search" placeholder="Search curated collection..." class="search-input" id="nav-search-input"
+                aria-label="Search items">
+              <button type="submit" class="search-submit-btn" aria-label="Submit search">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Wishlist Icon -->
+        <a href="#" class="action-btn" id="nav-wishlist-button" aria-label="View wishlist">
+          <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+            </path>
+          </svg>
+          <span class="action-badge" id="wishlist-count">0</span>
+        </a>
+
+        <!-- Shopping Cart Icon -->
+        <a href="#" class="action-btn" id="nav-cart-button" aria-label="View shopping cart">
+          <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="action-badge" id="cart-count">0</span>
+        </a>
+
+        <!-- User Account Profile Dropdown -->
+        <div class="account-dropdown-wrapper">
+          <button class="action-btn account-trigger" id="nav-account-button" aria-label="User account details"
+            aria-haspopup="true">
+            <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </button>
+          <ul class="account-dropdown" id="account-menu">
+            <li><a href="profile.html" class="dropdown-item">My Profile</a></li>
+            <li><a href="orders.html" class="dropdown-item">My Orders</a></li>
+            <li><a href="addresses.html" class="dropdown-item">Saved Addresses</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="#" class="dropdown-item sign-out-item">Sign In / Register</a></li>
+          </ul>
+        </div>
+
+        <!-- Premium Call-To-Action (Desktop Only) -->
+        <a href="#" class="nav-cta-btn" id="nav-cta-join">Join Club</a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer using HTML5 Popover API -->
+  <div id="mobile-drawer" popover="auto" class="mobile-menu-drawer">
+    <div class="drawer-header">
+      <span class="brand-logo drawer-logo">SHOPELAR</span>
+      <button class="drawer-close-btn" id="mobile-menu-close" aria-label="Close navigation menu"
+        popovertarget="mobile-drawer" popovertargetaction="hide">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="drawer-search">
+      <form action="#" class="mobile-search-form" id="mobile-search-form">
+        <input type="search" placeholder="Search items..." class="mobile-search-input" id="mobile-search-input"
+          aria-label="Search mobile site">
+        <button type="submit" class="mobile-search-submit" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+      </form>
+    </div>
+
+    <nav class="nav-mobile" aria-label="Main mobile navigation">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li class="mobile-collapsible">
+          <button class="mobile-collapsible-btn" id="mobile-shop-collapse">
+            Shop
+            <svg class="chevron-icon" viewBox="0 0 24 24">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+          <ul class="mobile-submenu-list" id="mobile-shop-submenu">
+            <li><a href="new-arrivals.html">New Arrivals</a></li>
+            <li><a href="best-sellers.html">Best Sellers</a></li>
+            <li><a href="limited-edition.html">Limited Edition</a></li>
+            <li><a href="clearance-sale.html">Clearance Sale</a></li>
+          </ul>
+        </li>
+        <li class="mobile-collapsible">
+          <button class="mobile-collapsible-btn" id="mobile-categories-collapse">
+            Categories
+            <svg class="chevron-icon" viewBox="0 0 24 24">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+          <ul class="mobile-submenu-list" id="mobile-categories-submenu">
+            <li><a href="the-linen-look.html">The Linen Look</a></li>
+            <li><a href="tailored-coats.html">Women's Collection</a></li>
+            <li><a href="overcoats-and-jackets.html">Men's Apparel</a></li>
+            <li><a href="leather-handbags.html">Leather Goods</a></li>
+            <li><a href="chrono-watches.html">Jewelry & Watches</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html" class="mobile-nav-link">About</a></li>
+        <li><a href="contact.html" class="mobile-nav-link active">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="drawer-footer">
+      <a href="profile.html" class="mobile-account-link">
+        <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+        <span>Account Profile</span>
+      </a>
+      <a href="#" class="mobile-cta-btn">Join Club</a>
+    </div>
+  </div>
+
+  <!-- Showcase / Scroll Spacing Container -->
+    <main class="page-container">
+    <header class="collection-hero">
+      <div class="collection-hero-content">
+        <span class="collection-badge">Concierge Service</span>
+        <h1 class="collection-title">Contact Us</h1>
+        <p class="collection-subtitle">We invite you to reach out for private styling appointments, showroom inquiries, or order support.</p>
+      </div>
+    </header>
+
+    <section class="contact-section" id="contact" style="padding: 60px 40px 100px;">
+      <div class="contact-container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <span class="contact-badge">GET IN TOUCH</span>
+            <h2 class="contact-title">Visit Our Atelier</h2>
+            <p class="contact-desc">Have a question or want to schedule a private fitting? Reach out to us, and our advisors will respond within 24 hours.</p>
+            
+            <div class="contact-details">
+              <div class="contact-detail-item">
+                <div class="detail-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div>
+                  <h4 class="detail-label">Location</h4>
+                  <p class="detail-value">Fifth Avenue 742, New York, NY</p>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <div class="detail-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div>
+                  <h4 class="detail-label">Email</h4>
+                  <p class="detail-value"><a href="mailto:concierge@shopelar.com">concierge@shopelar.com</a></p>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <div class="detail-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <div>
+                  <h4 class="detail-label">Phone</h4>
+                  <p class="detail-value"><a href="tel:+18005557467">+1 (800) 555-SHOP</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-form-wrapper">
+            <form class="contact-form" id="contact-form-el">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="form-name" class="form-label">Full Name</label>
+                  <input type="text" id="form-name" placeholder="Enter your name" class="form-input" required>
+                </div>
+                <div class="form-group">
+                  <label for="form-email" class="form-label">Email Address</label>
+                  <input type="email" id="form-email" placeholder="Enter your email" class="form-input" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="form-subject" class="form-label">Subject</label>
+                <input type="text" id="form-subject" placeholder="What is this regarding?" class="form-input" required>
+              </div>
+              <div class="form-group">
+                <label for="form-message" class="form-label">Message</label>
+                <textarea id="form-message" rows="5" placeholder="Write your message here..." class="form-input" required></textarea>
+              </div>
+              <button type="submit" class="form-submit-btn">
+                <span>Send Message</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="submit-arrow"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+              <div class="form-status-message" id="form-status"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Premium Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <!-- Brand Col -->
+        <div class="footer-column brand-column">
+          <span class="brand-logo footer-logo">SHOPELAR</span>
+          <p class="footer-brand-desc">Curating an exclusive selection of luxury apparel, lifestyle essentials, and modern design statements.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram" class="social-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" aria-label="Pinterest" class="social-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </a>
+            <a href="#" aria-label="Twitter" class="social-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Shop Col -->
+        <div class="footer-column">
+          <h4 class="footer-col-title">Shop Collection</h4>
+          <ul class="footer-links">
+            <li><a href="new-arrivals.html">New Arrivals</a></li>
+            <li><a href="best-sellers.html">Best Sellers</a></li>
+            <li><a href="limited-edition.html">Limited Edition</a></li>
+            <li><a href="the-linen-look.html">The Linen Series</a></li>
+            <li><a href="clearance-sale.html">Clearance Sale</a></li>
+          </ul>
+        </div>
+        
+        <!-- Care Col -->
+        <div class="footer-column">
+          <h4 class="footer-col-title">Client Care</h4>
+          <ul class="footer-links">
+            <li><a href="#">Shipping & Deliveries</a></li>
+            <li><a href="#">Returns & Exchanges</a></li>
+            <li><a href="#">Atelier Booking</a></li>
+            <li><a href="#">FAQ & Support</a></li>
+            <li><a href="#">Size Guides</a></li>
+          </ul>
+        </div>
+        
+        <!-- Newsletter Col -->
+        <div class="footer-column newsletter-column">
+          <h4 class="footer-col-title">The Shopelar Club</h4>
+          <p class="newsletter-desc">Subscribe to unlock early access to new collections and boutique events.</p>
+          <form class="newsletter-form" id="newsletter-form-el">
+            <input type="email" placeholder="Your email address" class="newsletter-input" required>
+            <button type="submit" class="newsletter-btn" aria-label="Subscribe">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </form>
+          <div class="newsletter-status" id="newsletter-status-el"></div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          &copy; 2026 Shopelar Inc. All rights reserved. Designed for elite shopping experiences.
+        </div>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Accessibility</a>
+        </div>
+        <div class="footer-payments">
+          <span class="payment-badge">AMEX</span>
+          <span class="payment-badge">VISA</span>
+          <span class="payment-badge">MASTERCARD</span>
+          <span class="payment-badge">APPLE PAY</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript Behavior -->
+  <script src="app.js"></script>
+</body>
+
+</html>
