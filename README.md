@@ -10,5 +10,7 @@ git clone https://github.com/mahmoudprogrammingpro/Shopelar
 ```
 cd shopelar
 ```
+## Images from the template
+<img src="assets/Images-from-the template.png" alt="Shopelar">
 ## Programmer
 Mahmoud Mohamed Siddiq Nasr Khalifa
